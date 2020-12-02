@@ -51,6 +51,8 @@ public class QRView:NSObject,FlutterPlatformView {
                 self.pauseCamera()
             case "resumeCamera":
                 self.resumeCamera()
+            case "closeCamera":
+                self.closeCamera()
             default:
                 result(FlutterMethodNotImplemented)
             return
@@ -84,6 +86,12 @@ public class QRView:NSObject,FlutterPlatformView {
                 result(error)
             }
         })
+    }
+    
+    func closeCamera {
+        if let sc: MTBBarcodeScanner = scanner {
+                sc.stopScanning(  
+        }
     }
     
     func updateCameraSettings(_ settings: [String: Any],_ result: @escaping FlutterResult){
