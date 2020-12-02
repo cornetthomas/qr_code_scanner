@@ -99,6 +99,10 @@ class QRView(private val registrar: PluginRegistry.Registrar, id: Int) :
             barcodeView?.resume()
         }
     }
+                
+     private fun closeCamera() {
+        // Not implemented
+    }
 
     private fun hasFlash(): Boolean {
         return registrar.activeContext().packageManager
@@ -196,6 +200,9 @@ class QRView(private val registrar: PluginRegistry.Registrar, id: Int) :
             "resumeCamera" -> {
                 resumeCamera()
             }
+             "closeCamera" -> {
+                closeCamera()
+             }
         }
     }
 
