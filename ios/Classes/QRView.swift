@@ -90,7 +90,7 @@ public class QRView:NSObject,FlutterPlatformView {
     
     func closeCamera() {
         if let sc: MTBBarcodeScanner = scanner {
-                sc.stopScanning(  
+                sc.stopScanning()
         }
     }
     
